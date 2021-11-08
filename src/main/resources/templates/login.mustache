@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:=http://www.w3.org/1999/xhtml>
+<head>
+	{{> meta}}
+	<title>Вход</title>
+</head>
+<body>
+<section class="container">
+	<div class="mx-auto border my-5 py-3 px-3 form">
+        <div>
+            <h1>Вход</h1>
+        </div>
+		<form action="/login" method="post">
+			<div class="form-group">
+				<label for="email">Логин</label>
+				<input class="form-control" id="username" type="text" name="username">
+			</div>
+			<div class="form-group">
+				<label for="password">Пароль</label>
+				<input class="form-control" id="password" type="password" name="password">
+			</div>
+			<input class="button" type="submit" value="Войти"/>
+		</form>
+        <form action="/registration" method="get">
+            <input class="button" type="submit" value="Регистрация"/>
+        </form>
+	</div>
+</section>
+</body>
+</html>

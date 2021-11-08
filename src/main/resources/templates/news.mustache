@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:=http://www.w3.org/1999/xhtml>
+<head>
+	{{> meta}}
+	<title>Новости</title>
+</head>
+<body>
+<section class="container">
+    <div class="my-3" align="center">
+        <h3>Привет, {{name}}</h3>
+        <form action="/logout" method="post">
+            <input class="button" type="submit" value="Выйти"/>
+        </form>
+    </div>
+    <div class="my-3" align="center">
+        <h1>Вы успешно зашли на сайт!</h1>
+        <h3>Этот сайт-аутентификация был сделан Даниилом Титовом из группы ПО6</h3>
+    </div>
+    <div class="my-3" align="center">
+        <table>
+            <thead>
+            <tr>
+                <th>
+                    <lablel>Login</lablel>
+                </th>
+                <th>
+                    <lablel>Password</lablel>
+                </th>
+                <th>
+                    <lablel>Role</lablel>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#Users}}
+            <tr>
+                <td>
+                    {{username}}
+                </td>
+                <td>
+                    {{password}}
+                </td>
+                <td>
+                    {{role}}
+                </td>
+            </tr>
+            {{/Users}}
+            </tbody>
+        </table>
+    </div>
+</section>
+</body>
+</html>
